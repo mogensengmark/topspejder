@@ -1,0 +1,112 @@
+/**
+@import url("typography.css");
+@import url("forms.css");
+@import url("menu.css");
+@import url("blogs.css");
+@import url("pages.css");
+@import url("units.css");
+@import url("gallery.css");
+**/
+@import url("sticky_footer.css");
+@import url("menu.css");
+
+html 
+{
+    font-size: 100%;
+}
+
+body
+{
+    background: #000;	
+    font-family:Verdana, Geneva, sans-serif;
+
+    font-size: 0.75em;
+    color:#000;
+}
+
+.container
+{
+    /** surpressing padding settings from 1140grid. **/
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.row
+{
+    background-color: #fff;
+}
+.vr
+{
+    /** vertical ruler column. Use together with 1140 grid calls onecol. **/
+    border: 1px solid;
+    height: 100px;
+    
+    background-image: url('../images/core/verticalRuler.png');
+    background-repeat: repeat-y;
+    background-position: center;
+    
+}
+
+#_themewrap
+{
+    margin: 0px auto;
+    /*width: 950px;*/
+    /*background: #fff;*/
+}
+
+#_top
+{
+    height: 10px;
+    background: #000;
+}
+
+.site-header {
+    height: 250px;
+}
+
+
+#_main
+{
+    height: 100%;
+    min-height: 100%;
+    /** CHANGE FOOTER HEIGHT HERE **/
+    padding-bottom: 90px;
+}
+
+#content
+{
+    /**border-left: 1px solid #00d;/**/
+}
+
+#_footer
+{
+    /** SCOUT LOGO **/
+    background-image: url("../images/logo_outline.png");
+    background-position: top center;
+    background-repeat: no-repeat;
+
+    /** CHANGE FOOTER HEIGHT HERE **/
+    padding-top: 20px;
+    /** CHANGE FOOTER HEIGHT HERE **/
+    height: 70px;
+    /** CHANGE FOOTER HEIGHT HERE **/
+    margin-top: -90px;
+}
+
+.footer
+{
+    /** HERLUFMAGLE GROUP TEXT**/
+    background: #000;
+    text-align: center;
+    color: #fff;
+
+    /**
+        * @todo: vertical align text
+        */
+
+    /** CHANGE FOOTER HEIGHT HERE **/
+    /** USE MARGIN NOT PADDING - MOVES DIV 40PIXELS DOWN **/
+    margin-top: 40px;
+    height: 30px; 
+	
+}
