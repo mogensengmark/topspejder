@@ -8,7 +8,7 @@
 @import url("gallery.css");
 **/
 @import url("sticky_footer.css");
-@import url("menu.css");
+@import url("menu_1.css");
 
 html 
 {
@@ -33,8 +33,10 @@ body
 
 .row
 {
+    /*overflow: visible;*/
     background-color: #fff;
 }
+
 .vr
 {
     /** vertical ruler column. Use together with 1140 grid calls onecol. **/
@@ -60,53 +62,80 @@ body
     background: #000;
 }
 
-.site-header {
+#_header {
     height: 250px;
+    
 }
 
+#_navigation {
+    /*
+     * We need to wrap the navigation into a div for holding it inside the 1140grid
+     * and then surpress the overflow: hidden from .row definition.
+     */
+    overflow: visible;
+}
 
 #_main
 {
+    /*
     height: 100%;
     min-height: 100%;
+    */
     /** CHANGE FOOTER HEIGHT HERE **/
     padding-bottom: 90px;
+    border: 1px solid green;
+    
+}
+
+.site-main {
+    
+}
+
+#main {
+    border: 1px solid red;
 }
 
 #content
 {
-    /**border-left: 1px solid #00d;/**/
+    /*border: 1px solid #00d;*/
 }
 
 #_footer
 {
+    /*border: 1px solid yellow;    */
+}
+
+#_footer-placeholder {
     /** SCOUT LOGO **/
     background-image: url("../images/logo_outline.png");
     background-position: top center;
     background-repeat: no-repeat;
+    
+    background-color: #fff;
 
     /** CHANGE FOOTER HEIGHT HERE **/
-    padding-top: 20px;
+    padding-top: 30px;
     /** CHANGE FOOTER HEIGHT HERE **/
     height: 70px;
     /** CHANGE FOOTER HEIGHT HERE **/
-    margin-top: -90px;
+    margin-top: -100px;
 }
 
-.footer
-{
-    /** HERLUFMAGLE GROUP TEXT**/
-    background: #000;
+#_footer-element {
+    background-color: #000;
     text-align: center;
-    color: #fff;
-
+    color: #fff;  
+    line-height: 2.5em;
     /**
-        * @todo: vertical align text
-        */
+     * @todo: vertical align text
+     */
 
     /** CHANGE FOOTER HEIGHT HERE **/
     /** USE MARGIN NOT PADDING - MOVES DIV 40PIXELS DOWN **/
     margin-top: 40px;
     height: 30px; 
-	
+}
+
+#_footer-text {
+
 }

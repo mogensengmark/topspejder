@@ -11,52 +11,107 @@
 <html <?php language_attributes(); ?>>
 <head>
 <meta charset="<?php bloginfo( 'charset' ); ?>" />
-<meta name="viewport" content="width=device-width" />
-<title><?php
-	/*
-	 * Print the <title> tag based on what is being viewed.
-	 */
-	global $page, $paged;
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>
+<?php
+    /*
+        * Print the <title> tag based on what is being viewed.
+        */
+    global $page, $paged;
 
-	wp_title( '|', true, 'right' );
+    wp_title( '|', true, 'right' );
 
-	// Add the blog name.
-	bloginfo( 'name' );
+    // Add the blog name.
+    bloginfo( 'name' );
 
-	// Add the blog description for the home/front page.
-	$site_description = get_bloginfo( 'description', 'display' );
-	if ( $site_description && ( is_home() || is_front_page() ) )
-		echo " | $site_description";
+    // Add the blog description for the home/front page.
+    $site_description = get_bloginfo( 'description', 'display' );
+    if ( $site_description && ( is_home() || is_front_page() ) )
+            echo " | $site_description";
 
-	// Add a page number if necessary:
-	if ( $paged >= 2 || $page >= 2 )
-		echo ' | ' . sprintf( __( 'Page %s', 'topspejder' ), max( $paged, $page ) );
+    // Add a page number if necessary:
+    if ( $paged >= 2 || $page >= 2 )
+            echo ' | ' . sprintf( __( 'Page %s', 'topspejder' ), max( $paged, $page ) );
 
-	?></title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
-<!--[if lt IE 9]>
-<script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
-<![endif]-->
+?>
+</title>
 
-<?php wp_head(); ?>
+    <link rel="profile" href="http://gmpg.org/xfn/11" />
+    <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+    <!--[if lt IE 9]>
+    <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+
+    <?php wp_head(); ?>
+    
+    <!-- 1140px Grid styles for IE -->
+    <!--[if lte IE 9]><link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/ie.css" type="text/css" media="screen" /><![endif]-->
+
+    <!-- The 1140px Grid - http://cssgrid.net/ -->
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/1140.css" type="text/css" media="screen" />
+
+    <!-- Site specific design -->
+    <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/design.css" type="text/css" media="screen" />
+
+    <!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
+    <script type="text/javascript" src="<?php bloginfo('url') ?>js/css3-mediaqueries.js"></script>
+
+
 </head>
 
 <body <?php body_class(); ?>>
-<div id="page" class="hfeed site">
-	<?php do_action( 'before' ); ?>
-	<header id="masthead" class="site-header" role="banner">
-		<hgroup>
-			<h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-		</hgroup>
+    <div id="_themewrap">
+        <div id="_main" class="container">
+            <div id="_top" class="row"></div>
+            <div id="_header" class="row">
+                <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+<?php
+// Site title and description fields.
+// Deactivated untill further notice.
+/**
+                <hgroup>
+                    <h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                    <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                </hgroup>
+/**/
+?>
+            </div> <!-- #_header row -->
+<!--            <nav role="navigation" class="site-navigation main-navigation row _menuoverflow">-->
+            <div id="_navigation" class="row">
+                <nav role="navigation" class="site-navigation main-navigation">
+                <?php 
+                    wp_nav_menu(array(
+                                    'menu' => 'topmenu', 
+                                    'container_id' => 'cssmenu', 
+                                    'walker' => new CSS_Menu_Maker_Walker()
+                                    )); 
+                ?>
+                </nav><!-- .site-navigation .main-navigation -->
+            </div>
+<?php
+/**
+            <div id="page" class="hfeed site">
+                <?php do_action( 'before' ); ?>
+                <header id="masthead" class="site-header" role="banner">
+                    <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+                    <hgroup>
+                        <h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+                        <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
+                    </hgroup>
+                    <!--<nav role="navigation" class="site-navigation main-navigation">-->
+                    <nav role="navigation" class="site-navigation main-navigation _menuoverflow">
+                    <?php 
+                        wp_nav_menu(array(
+                                        'menu' => 'topmenu', 
+                                        'container_id' => 'cssmenu', 
+                                        'walker' => new CSS_Menu_Maker_Walker()
+                                        )); 
+                    ?>
+                    </nav><!-- .site-navigation .main-navigation -->
+                </header><!-- #masthead .site-header -->
+            </div><!-- #page .hfeed site -->
 
-		<nav role="navigation" class="site-navigation main-navigation">
-			<h1 class="assistive-text"><?php _e( 'Menu', 'topspejder' ); ?></h1>
-			<div class="assistive-text skip-link"><a href="#content" title="<?php esc_attr_e( 'Skip to content', 'topspejder' ); ?>"><?php _e( 'Skip to content', 'topspejder' ); ?></a></div>
-
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav><!-- .site-navigation .main-navigation -->
-	</header><!-- #masthead .site-header -->
-
-	<div id="main" class="site-main">
+        </div> <!-- #_header row -->
+/**/
+?>
+            <div id="main" class="site-main">

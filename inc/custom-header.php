@@ -37,9 +37,9 @@ function topspejder_custom_header_setup() {
 	$args = array(
 		'default-image'          => '',
 		'default-text-color'     => '000',
-		'width'                  => 1000,
+		'width'                  => 1140,
 		'height'                 => 250,
-		'flex-height'            => true,
+		'flex-height'            => false,
 		'wp-head-callback'       => 'topspejder_header_style',
 		'admin-head-callback'    => 'topspejder_admin_header_style',
 		'admin-preview-callback' => 'topspejder_admin_header_image',

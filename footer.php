@@ -9,19 +9,35 @@
  */
 ?>
 
-	</div><!-- #main .site-main -->
-
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<?php do_action( 'topspejder_credits' ); ?>
-			<a href="http://wordpress.org/" title="<?php esc_attr_e( 'A Semantic Personal Publishing Platform', 'topspejder' ); ?>" rel="generator"><?php printf( __( 'Proudly powered by %s', 'topspejder' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'topspejder' ), 'topspejder', '<a href="http://automattic.com/" rel="designer">Automattic</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon .site-footer -->
-</div><!-- #page .hfeed .site -->
-
+            </div><!-- #main .site-main -->
+        </div> <!-- #_main .container -->
+    </div><!-- #_themewrap -->
+<?php
+/**
+    <div id="_footer" class="container">
+        <div id="_footer-element" class="row">
+            <footer id="colophon" class="site-footer" role="contentinfo">
+                    <div class="site-info twelvecol last">
+                        <?php do_action( 'topspejder_credits' ); ?>
+                        sijdaoihsetnaæoshaæbtraæoiheæb
+                    </div><!-- .site-info -->
+            </footer><!-- #colophon .site-footer -->
+        </div> <!-- .row -->
+    </div><!-- #_footer .container -->
+**/
+?>
+     <div id="_footer" class="container">
+        <div id="_footer-placeholder" class="row">
+            <div id="_footer-element" class="twelvecol last">
+                KFUM-Spejderne, Herlufmagle Gruppe, Sletskovvej 5, 4160 Herlufmagle
+            </div>
+        </div> <!-- _footer-element row -->
+     </div> <!-- _footer container -->
+   
+    
 <?php wp_footer(); ?>
+
+
 
 </body>
 </html>
