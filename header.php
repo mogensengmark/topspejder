@@ -60,34 +60,35 @@
 </head>
 
 <body <?php body_class(); ?>>
-    <div id="_themewrap">
-        <div id="_main" class="container">
-            <div id="_top" class="row"></div>
-            <div id="_header" class="row">
-                <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-<?php
-// Site title and description fields.
-// Deactivated untill further notice.
-/**
-                <hgroup>
-                    <h1 class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-                    <h2 class="site-description"><?php bloginfo( 'description' ); ?></h2>
-                </hgroup>
-/**/
-?>
-            </div> <!-- #_header row -->
-<!--            <nav role="navigation" class="site-navigation main-navigation row _menuoverflow">-->
-            <div id="_navigation" class="row">
-                <nav role="navigation" class="site-navigation main-navigation">
+    <div id="_main" class="container">
+        <div id="_site_titles" class="row">
+            <span class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
+            <span class="site-description"><?php bloginfo( 'description' ); ?></span>
+        </div> <!-- #_site_titles row -->
+        <div id="_header" class="shade row">
+            <!--<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="top" />-->
+            <img src="<?php header_image(); ?>" height="250" width="<?php echo get_custom_header()->width; ?>" alt="top" />
+            <!--<nav role="navigation" class="site-navigation main-navigation ">-->
+            <nav role="navigation" class=" ">
                 <?php 
                     wp_nav_menu(array(
                                     'menu' => 'topmenu', 
                                     'container_id' => 'cssmenu', 
                                     'walker' => new CSS_Menu_Maker_Walker()
                                     )); 
+                     
                 ?>
-                </nav><!-- .site-navigation .main-navigation -->
-            </div>
+            </nav><!-- .site-navigation .main-navigation -->
+
+        </div> <!-- #_header row -->
+        <div id="_navigation" class="row">
+            <!--
+            <div class="row"><hr class="seperator"></div>
+            -->
+        </div>
+        <!--
+        <div class="row"><hr class="seperator"></div>
+        -->
 <?php
 /**
             <div id="page" class="hfeed site">
