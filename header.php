@@ -15,8 +15,8 @@
 <title>
 <?php
     /*
-        * Print the <title> tag based on what is being viewed.
-        */
+     * Print the <title> tag based on what is being viewed.
+     */
     global $page, $paged;
 
     wp_title( '|', true, 'right' );
@@ -60,6 +60,8 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <!--<div id="_themewrap">-->
+
     <div id="_main" class="container">
         <div id="_site_titles" class="row">
             <span class="site-title"><a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></span>
@@ -67,9 +69,9 @@
         </div> <!-- #_site_titles row -->
         <div id="_header" class="shade row">
             <!--<img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="top" />-->
-            <img src="<?php header_image(); ?>" height="250" width="<?php echo get_custom_header()->width; ?>" alt="top" />
+            <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" class="top-round" alt="top" />
             <!--<nav role="navigation" class="site-navigation main-navigation ">-->
-            <nav role="navigation" class=" ">
+            <nav role="navigation" class="">
                 <?php 
                     wp_nav_menu(array(
                                     'menu' => 'topmenu', 
@@ -86,9 +88,7 @@
             <div class="row"><hr class="seperator"></div>
             -->
         </div>
-        <!--
-        <div class="row"><hr class="seperator"></div>
-        -->
+        <div class="row buffer"></div>
 <?php
 /**
             <div id="page" class="hfeed site">
@@ -115,4 +115,4 @@
         </div> <!-- #_header row -->
 /**/
 ?>
-            <div id="main" class="site-main">
+            <div id="main" class="row site-main">

@@ -1,11 +1,19 @@
 #cssmenu {
+    
     height:39px; 
     display:block; 
     padding:0; 
-    margin: 0;  
+    margin: 0;
+    margin-top: -4px;
     border-top: 1px solid;
     border-bottom: 1px solid;
     /*border-radius:5px;*/
+    -webkit-border-bottom-right-radius: 5px;
+    -webkit-border-bottom-left-radius: 5px;
+    -moz-border-radius-bottomright: 5px;
+    -moz-border-radius-bottomleft: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
 } 
 
 #cssmenu > ul {

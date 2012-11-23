@@ -50,28 +50,45 @@ body
 }
 
 .shade {
-    /**
-    -webkit-box-shadow: 0px 0px 5px rgba(50, 50, 50, 0.5);
-    -moz-box-shadow:    0px 0px 5px rgba(50, 50, 50, 0.5);
-    box-shadow:         0px 0px 5px rgba(50, 50, 50, 0.5);
-
-    /**/
     -webkit-box-shadow: 0px 0px 6px #000;
     -moz-box-shadow:    0px 0px 6px #000; 
     box-shadow:         0px 0px 6px #000;
     /**/
-    -webkit-border-radius:  5px;
-    -moz-border-radius:     5px;
-    border-radius:          5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+
 }
 
 #_header {
-    height: 287px;  
     /*
      * We need to wrap the navigation into a div for holding it inside the 1140grid
      * and then surpress the overflow: hidden from .row definition.
      */
     overflow: visible;
+    /*
+     * Images counts 250px
+     * menu counts 37x;
+     * something obvious does not match..
+     */
+    height: 291px;
+    /*
+    -webkit-box-shadow: 2px 3px 5px rgba(50, 50, 50, 0.5);
+    -moz-box-shadow:    2px 3px 5px rgba(50, 50, 50, 0.5);
+    box-shadow:         2px 3px 5px rgba(50, 50, 50, 0.5);
+    */
+    /**/
+}
+
+#_header img{
+    -webkit-border-top-left-radius: 5px;
+    -webkit-border-top-right-radius: 5px;
+    -moz-border-radius-topleft: 5px;
+    -moz-border-radius-topright: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+
+    /*height: 287px;  */
 }
 
 .site-title,
@@ -107,9 +124,31 @@ body
     background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.2)); 
 }
 
+.buffer {
+    height: 15px;
+}
+
 #secondary {
     /*container for sidebar*/
 }
+
+
+.widget,
+.site-content{
+    
+    background-image: url('../images/subtle-pattern-body-bg.png');
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 6px #888;
+    -moz-box-shadow:    0px 0px 6px #888; 
+    box-shadow:         0px 0px 6px #888;
+    /**/
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
 
 #_navigation {
     /*
@@ -150,6 +189,17 @@ body
 #content
 {
     /*border: 1px solid #00d;*/
+}
+
+.entry-title, 
+.widget-title {
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 2.0em;
+}
+
+#image_slider {
+    height: 600px;
+    border: 1px solid green;
 }
 
 #_footer
