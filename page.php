@@ -11,15 +11,12 @@
  * @since topspejder 1.0
  */
 
-get_header(); 
+get_header();
 ?>
 
-
-
-
-    <div id="_page" class="row">
-        <div i8d="primary" class="content-area ninecol">
-            <div id="content" class="site-content" role="main">
+    <div id="_page">
+        <div id="primary" class="ninecol content-area">
+            <div id="content" class="site-content _content-box" role="main">
 
                 <?php while ( have_posts() ) : the_post(); ?>
 

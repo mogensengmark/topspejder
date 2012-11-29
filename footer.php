@@ -9,9 +9,8 @@
  */
 ?>
 
-            </div><!-- #main .site-main -->
-        </div> <!-- #_main .container -->
-<!--    </div>--><!-- #_themewrap -->
+        </div><!-- #main .row .site-main -->
+    </div> <!-- #_main .container -->
 <?php
 /**
     <div id="_footer" class="container">
@@ -33,8 +32,8 @@
             </div>
         </div> <!-- _footer-element row -->
      </div> <!-- _footer container -->
-   
-    
+
+
 <?php wp_footer(); ?>
 
 

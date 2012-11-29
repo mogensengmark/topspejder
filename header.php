@@ -43,7 +43,7 @@
     <![endif]-->
 
     <?php wp_head(); ?>
-    
+
     <!-- 1140px Grid styles for IE -->
     <!--[if lte IE 9]><link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/ie.css" type="text/css" media="screen" /><![endif]-->
 
@@ -54,7 +54,13 @@
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_directory') ?>/css/design.css" type="text/css" media="screen" />
 
     <!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
-    <script type="text/javascript" src="<?php bloginfo('url') ?>js/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('url') ?>/js/css3-mediaqueries.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('url') ?>/js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript" src="<?php bloginfo('url') ?>/js/jquery.nivo.slider.pack.js"></script>
+
+
+
 
 
 </head>
@@ -72,13 +78,13 @@
             <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" class="top-round" alt="top" />
             <!--<nav role="navigation" class="site-navigation main-navigation ">-->
             <nav role="navigation" class="">
-                <?php 
+                <?php
                     wp_nav_menu(array(
-                                    'menu' => 'topmenu', 
-                                    'container_id' => 'cssmenu', 
+                                    'menu' => 'topmenu',
+                                    'container_id' => 'cssmenu',
                                     'walker' => new CSS_Menu_Maker_Walker()
-                                    )); 
-                     
+                                    ));
+
                 ?>
             </nav><!-- .site-navigation .main-navigation -->
 
@@ -101,12 +107,12 @@
                     </hgroup>
                     <!--<nav role="navigation" class="site-navigation main-navigation">-->
                     <nav role="navigation" class="site-navigation main-navigation _menuoverflow">
-                    <?php 
+                    <?php
                         wp_nav_menu(array(
-                                        'menu' => 'topmenu', 
-                                        'container_id' => 'cssmenu', 
+                                        'menu' => 'topmenu',
+                                        'container_id' => 'cssmenu',
                                         'walker' => new CSS_Menu_Maker_Walker()
-                                        )); 
+                                        ));
                     ?>
                     </nav><!-- .site-navigation .main-navigation -->
                 </header><!-- #masthead .site-header -->
@@ -115,4 +121,4 @@
         </div> <!-- #_header row -->
 /**/
 ?>
-            <div id="main" class="row site-main">
+        <div id="main" class="row site-main">

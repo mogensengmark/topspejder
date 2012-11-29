@@ -7,6 +7,7 @@
  */
 ?>
     <div id="secondary" class="widget-area threecol last" role="complementary">
+        <div class="_content_box">
     <?php do_action( 'before_sidebar' ); ?>
     <?php if ( ! dynamic_sidebar( 'sidebar-1' ) ) : ?>
 
@@ -31,4 +32,5 @@
         </aside>
 
     <?php endif; // end sidebar widget area ?>
+        </div>
     </div><!-- #secondary .widget-area threecol last-->

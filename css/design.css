@@ -10,8 +10,11 @@
 @import url("http://fonts.googleapis.com/css?family=ABeeZee");
 @import url("sticky_footer.css");
 @import url("menu_1.css");
+@import url("nivo-slider.css");
+@import url("nivo_slider_light/light.css");
 
-html 
+
+html
 {
     font-size: 100%;
 }
@@ -42,16 +45,16 @@ body
     /** vertical ruler column. Use together with 1140 grid calls onecol. **/
     /*border: 1px solid;*/
     height: 100px;
-    
+
     background-image: url('../images/core/verticalRuler.png');
     background-repeat: repeat-y;
     background-position: center;
-    
+
 }
 
 .shade {
     -webkit-box-shadow: 0px 0px 6px #000;
-    -moz-box-shadow:    0px 0px 6px #000; 
+    -moz-box-shadow:    0px 0px 6px #000;
     box-shadow:         0px 0px 6px #000;
     /**/
     -webkit-border-radius: 5px;
@@ -117,31 +120,53 @@ body
     width: 85%;
     margin-right: 5px;
     float: right;
-    
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.2)); 
-    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.2)); 
-    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.2)); 
-    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.2)); 
+
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.2));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.2));
 }
 
 .buffer {
     height: 15px;
+    /*background-color: red;*/
+}
+
+.border {
+    border: 1px solid;
+}
+
+._size {
+    width: 90%;
+    padding: 10px;
+
+}
+
+#left {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid;
 }
 
 #secondary {
     /*container for sidebar*/
 }
 
-
 .widget,
-.site-content{
-    
-    background-image: url('../images/subtle-pattern-body-bg.png');
+.__content-box {
+
+    /*background-image: url('../images/subtle-pattern-body-bg.png');*/
+    background-color: #fdfdfd;
+    margin: 5px;
+    /*
     margin-top: 5px;
     margin-bottom: 5px;
+    */
     padding: 10px;
+
+
     -webkit-box-shadow: 0px 0px 6px #888;
-    -moz-box-shadow:    0px 0px 6px #888; 
+    -moz-box-shadow:    0px 0px 6px #888;
     box-shadow:         0px 0px 6px #888;
     /**/
     -webkit-border-radius: 5px;
@@ -149,7 +174,16 @@ body
     border-radius: 5px;
 }
 
+.widget {
+    margin-bottom: 25px;
 
+}
+/*
+.post,
+.page{
+    margin-left: 5px;
+}
+*/
 #_navigation {
     /*
      * We need to wrap the navigation into a div for holding it inside the 1140grid
@@ -159,7 +193,7 @@ body
 }
 
 .site-navigation {
-    
+
 }
 #_main
 {
@@ -177,7 +211,7 @@ body
 }
 
 .site-main {
-    
+
 }
 
 #main {
@@ -191,15 +225,17 @@ body
     /*border: 1px solid #00d;*/
 }
 
-.entry-title, 
+.entry-title,
 .widget-title {
     font-family: 'ABeeZee', sans-serif;
     font-size: 2.0em;
 }
 
 #image_slider {
+    /*
     height: 600px;
     border: 1px solid green;
+    */
 }
 
 #_footer
@@ -212,7 +248,7 @@ body
     background-image: url("../images/logo_outline.png");
     background-position: top center;
     background-repeat: no-repeat;
-    
+
     /** CHANGE FOOTER HEIGHT HERE **/
     padding-top: 30px;
     /** CHANGE FOOTER HEIGHT HERE **/
@@ -224,7 +260,7 @@ body
 #_footer-element {
     /*background-color: #000;*/
     text-align: center;
-    color: #000;  
+    color: #000;
     line-height: 2.5em;
     /**
      * @todo: vertical align text
@@ -233,7 +269,7 @@ body
     /** CHANGE FOOTER HEIGHT HERE **/
     /** USE MARGIN NOT PADDING - MOVES DIV 40PIXELS DOWN **/
     margin-top: 40px;
-    height: 30px; 
+    height: 30px;
 }
 
 #_footer-text {

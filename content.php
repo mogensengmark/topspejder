@@ -4,21 +4,7 @@
  * @since topspejder 1.0
  */
 ?>
-<?php
-    if ( function_exists( 'soliloquy_slider' ) ) {
-?>
-<div id="image_slider" class="ninecol">
-    <h1>Lidt forskellige billeder..</h1>
-    <?php
-        soliloquy_slider( '96' );
-    ?>
-</div>
-<div class="buffer"></div>
-<?php
-    }
-?>
 
-<div>
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
         <header class="entry-header">
         <h1 class="entry-title"><a href="<?php the_permalink(); ?>" title="<?php echo esc_attr( sprintf( __( 'Permalink to %s', 'topspejder' ), the_title_attribute( 'echo=0' ) ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h1>
@@ -40,7 +26,6 @@
         <?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'topspejder' ), 'after' => '</div>' ) ); ?>
         </div><!-- .entry-content -->
         <?php endif; ?>
-
         <footer class="entry-meta">
             <?php if ( 'post' == get_post_type() ) : // Hide category and tag text for pages on Search ?>
             <?php
@@ -72,5 +57,7 @@
 
         <?php edit_post_link( __( 'Edit', 'topspejder' ), '<span class="sep"> | </span><span class="edit-link">', '</span>' ); ?>
         </footer><!-- .entry-meta -->
+
     </article><!-- #post-<?php the_ID(); ?> -->
-</div>
+    <div class="buffer"></div>
+
