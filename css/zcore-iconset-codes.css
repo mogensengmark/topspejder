@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+
+.icon-home:before { content: '\2302'; } /* '⌂' */
+.icon-menu:before { content: '\2630'; } /* '☰' */
+.icon-layout:before { content: '\268f'; } /* '⚏' */
+.icon-tools:before { content: '\2692'; } /* '⚒' */
+.icon-cog:before { content: '\2699'; } /* '⚙' */
+.icon-mail:before { content: '\2709'; } /* '✉' */
+.icon-check:before { content: '\2713'; } /* '✓' */
+.icon-cancel:before { content: '\2715'; } /* '✕' */
+.icon-list-add:before { content: '\e003'; } /* '' */
+.icon-list:before { content: '\e005'; } /* '' */
+.icon-user-add:before { content: '\e700'; } /* '' */
+.icon-tag:before { content: '\e70c'; } /* '' */
+.icon-vcard:before { content: '\e722'; } /* '' */
+.icon-trash:before { content: '\e729'; } /* '' */
+.icon-rss:before { content: '\e73a'; } /* '' */
+.icon-basket:before { content: '\e73d'; } /* '' */
+.icon-login:before { content: '\e740'; } /* '' */
+.icon-logout:before { content: '\e741'; } /* '' */
+.icon-down-open-mini:before { content: '\e760'; } /* '' */
+.icon-left-open-mini:before { content: '\e761'; } /* '' */
+.icon-right-open-mini:before { content: '\e762'; } /* '' */
+.icon-up-open-mini:before { content: '\e763'; } /* '' */
+.icon-spin2:before { content: '\e831'; } /* '' */
+.icon-picture:before { content: '🌄'; } /* '\1f304' */
+.icon-users:before { content: '👥'; } /* '\1f465' */
+.icon-folder:before { content: '📁'; } /* '\1f4c1' */
+.icon-calendar:before { content: '📅'; } /* '\1f4c5' */
+.icon-phone:before { content: '📞'; } /* '\1f4de' */
+.icon-upload:before { content: '📤'; } /* '\1f4e4' */
+.icon-download:before { content: '📥'; } /* '\1f4e5' */
+.icon-mobile:before { content: '📱'; } /* '\1f4f1' */
+.icon-camera:before { content: '📷'; } /* '\1f4f7' */
+.icon-arrows-ccw:before { content: '🔄'; } /* '\1f504' */
+.icon-clock:before { content: '🕔'; } /* '\1f554' */
