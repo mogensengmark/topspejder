@@ -133,9 +133,12 @@ body
     /*container for sidebar*/
 }
 
-
+/*
 .widget,
 .site-content{
+*/
+.widget
+{
     
     background-image: url('../images/subtle-pattern-body-bg.png');
     margin-top: 5px;

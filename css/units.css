@@ -9,7 +9,7 @@
 
     /*margin-left: 5px;*/
     padding-bottom: 10px;
-    border: 1px solid magenta;
+    /*border: 1px solid magenta;*/
 }
 
 .unit_list_item_logo
@@ -18,7 +18,8 @@
     float: left;
     width: 155px;
     height: 100px;
-    border: 1px solid red;
+    margin-right: 10px;
+    /*border: 1px solid red;*/
 }
 
 .unit_list_item_data
@@ -26,14 +27,14 @@
     /*width: 500px;*/
     float: left;
     height: 100px;
-    border: 1px solid grey;
+    /*border: 1px solid grey;*/
 }
 
 .unit_list_item_data_wrapper {
     /*width: 100%;*/
     clear: both;
     float: left;
-    border: 1px solid yellow;
+    /*border: 1px solid yellow;*/
 }
 
 .unit_list_item_data_item
@@ -41,13 +42,13 @@
     clear: both;
     float: left;
     width:100px;
-    border: 1px solid blue;
+    /*border: 1px solid blue;*/
 }
 
 .unit_list_item_data_value
 {
     float: right;
-    border: 1px solid green;
+    /*border: 1px solid green;*/
 }
 
 
@@ -67,27 +68,8 @@
     margin-right: 10px;
 }
 
-/**
-    UNIT DESCRIPTION
-**/
-.unitDetailsLogo
+.unit_description 
 {
-    width: 100%;
     float: left;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-#unitDescriptionMain
-{
-    padding-top: 10px;
-
-}
-
-/**
-    UNIT DESCRIPTION CALENDAR
-**/
-.unitDescriptionCalendar
-{
-
+    width: 100%;
 }

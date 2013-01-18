@@ -42,8 +42,10 @@ get_header(); ?>
                     </div> <!-- .unit_list_item_data -->
                 </div> <!-- .unit_list_item -->
 
-
-            <?php the_content(); ?>
+                <div class="unit_description">
+                <?php the_content(); ?>
+                </div>
+                
             </div><!-- #content .site-content -->
         </div><!-- #primary .content-area -->
             <?php endwhile; // end of the loop. ?>
